@@ -1,5 +1,6 @@
-import Movie from './Components/Movie';
+import Movie from './Components/Movie/Movie';
 import {movies} from './movieDummy';
+import * as M from './Components/Movie/Movie.style'
 
 function App() {
   const showInfo=()=>{
@@ -7,8 +8,8 @@ function App() {
   };
 
   return (
-    <div>
-      <div className="movie_container">
+    <M.bg>
+      <M.movie_container>
         {
           movies.results.map((item)=>{
             return (
@@ -21,8 +22,8 @@ function App() {
             )
           })
         }
-      </div>
-    </div>
+      </M.movie_container>
+    </M.bg>
   )
 }
 
